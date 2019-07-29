@@ -43,3 +43,11 @@ In the console:
 ```bash
 serverless invoke local --function update --path mocks/update-event.json
 ```
+
+### Delete note
+
+In the console:
+
+```bash
+serverless invoke local --function delete --path mocks/delete-event.json
+```

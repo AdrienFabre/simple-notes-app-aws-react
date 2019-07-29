@@ -35,3 +35,11 @@ In the console:
 ```bash
 serverless invoke local --function list --path mocks/list-event.json
 ```
+
+### Update note
+
+In the console:
+
+```bash
+serverless invoke local --function update --path mocks/update-event.json
+```

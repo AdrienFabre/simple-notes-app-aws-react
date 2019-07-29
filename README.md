@@ -127,7 +127,7 @@ layers:
 npm install
 ```
 
-### Run 
+### Run
 
 ```bash
 npm start

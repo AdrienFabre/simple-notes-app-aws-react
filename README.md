@@ -27,3 +27,11 @@ In the console:
 ```bash
 serverless invoke local --function get --path mocks/get-event.json
 ```
+
+### Get note list
+
+In the console:
+
+```bash
+serverless invoke local --function list --path mocks/list-event.json
+```

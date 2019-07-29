@@ -4,9 +4,11 @@
 
 Build a full-stack production ready note taking app using Serverless and React on AWS. Follow our step-by-step open-source tutorials with screenshots and code samples.
 
-## Run tests
+## Backend - notes-app-api
 
-### Create note
+### Run tests
+
+#### Create note
 
 In the console:
 
@@ -20,7 +22,7 @@ or, if you have multiple profiles for your AWS SDK credentials:
 AWS_PROFILE=myProfile serverless invoke local --function create --path mocks/create-event.json
 ```
 
-### Get note
+#### Get note
 
 In the console:
 
@@ -28,7 +30,7 @@ In the console:
 serverless invoke local --function get --path mocks/get-event.json
 ```
 
-### Get note list
+#### Get note list
 
 In the console:
 
@@ -36,7 +38,7 @@ In the console:
 serverless invoke local --function list --path mocks/list-event.json
 ```
 
-### Update note
+#### Update note
 
 In the console:
 
@@ -44,7 +46,7 @@ In the console:
 serverless invoke local --function update --path mocks/update-event.json
 ```
 
-### Delete note
+#### Delete note
 
 In the console:
 
@@ -52,7 +54,7 @@ In the console:
 serverless invoke local --function delete --path mocks/delete-event.json
 ```
 
-### The APIs
+#### The APIs
 
 In the console:
 
@@ -71,7 +73,7 @@ npx aws-api-gateway-cli-test \
 --body='{"content":"hello world","attachment":"hello.jpg"}'
 ```
 
-## Deploy
+### Deploy
 
 In the console:
 
@@ -91,7 +93,7 @@ to deploy only a single function (example 'list')
 serverless deploy function -f list
 ```
 
-### Service Information
+#### Service Information
 
 ```bash
 service: notes-app-api
@@ -115,4 +117,18 @@ functions:
   delete: notes-app-api-prod-delete
 layers:
   None
+```
+
+## Frontend - notes-app-client
+
+### Install
+
+```bash
+npm install
+```
+
+### Run 
+
+```bash
+npm start
 ```

@@ -4,7 +4,7 @@
 
 Build a full-stack production ready note taking app using Serverless and React on AWS. Follow our step-by-step open-source tutorials with screenshots and code samples.
 
-### Run tests
+## Run tests
 
 ### Create note
 
@@ -50,4 +50,50 @@ In the console:
 
 ```bash
 serverless invoke local --function delete --path mocks/delete-event.json
+```
+
+## Deploy
+
+In the console:
+
+```bash
+serverless deploy
+```
+
+or, if you have multiple profiles for your AWS SDK credentials:
+
+```bash
+serverless deploy --aws-profile myProfile
+```
+
+to deploy only a single function (example 'list')
+
+```bash
+serverless deploy function -f list
+```
+
+### Service Information
+
+```bash
+service: notes-app-api
+stage: prod
+region: eu-west-2
+stack: notes-app-api-prod
+resources: 35
+api keys:
+  None
+endpoints:
+  POST - https://u9pkdb1nab.execute-api.eu-west-2.amazonaws.com/prod/notes
+  GET - https://u9pkdb1nab.execute-api.eu-west-2.amazonaws.com/prod/notes/{id}
+  GET - https://u9pkdb1nab.execute-api.eu-west-2.amazonaws.com/prod/notes
+  PUT - https://u9pkdb1nab.execute-api.eu-west-2.amazonaws.com/prod/notes/{id}
+  DELETE - https://u9pkdb1nab.execute-api.eu-west-2.amazonaws.com/prod/notes/{id}
+functions:
+  create: notes-app-api-prod-create
+  get: notes-app-api-prod-get
+  list: notes-app-api-prod-list
+  update: notes-app-api-prod-update
+  delete: notes-app-api-prod-delete
+layers:
+  None
 ```

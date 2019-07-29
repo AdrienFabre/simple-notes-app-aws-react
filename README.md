@@ -133,6 +133,7 @@ Create `notes-app-client/src/config.js` and paste your details with this format:
 
 ```node
 export default {
+  MAX_ATTACHMENT_SIZE: 5000000,
   s3: {
     REGION: "YOUR_S3_UPLOADS_BUCKET_REGION",
     BUCKET: "YOUR_S3_UPLOADS_BUCKET_NAME"
